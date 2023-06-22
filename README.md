@@ -36,15 +36,18 @@ The "PRE" metrics indicate that all resources were originally deployed and expos
 The "POST" metrics indicate that Network Security Groups were hardened by blocking ALL traffic with the exception of the admin workstation. All other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+[NSG Allowed Inbound Malicious Flows]![NSG Flow Logs](https://github.com/letumnu/HoneyNet/assets/23455567/c9f93049-d9c1-42e1-85c6-302d98eab222)
+<br>
+[Linux Syslog Auth Failures]![Linux Fail](https://github.com/letumnu/HoneyNet/assets/23455567/62321990-9b57-4167-aae9-320d48f1a112)
+<br>
+[Windows RDP/SMB Auth Failures]![Windows RDp](https://github.com/letumnu/HoneyNet/assets/23455567/a0faa21a-0bca-48a9-ac44-7a678a20df63)
+<br>
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+The following table shows the metrics we measured in our insecure environment for 24 hours:<br>
+Start Time 2023-05-23 12:51:41<br>
+Stop Time 2023-05-24 12:51:41
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -54,7 +57,7 @@ Stop Time 2023-03-16 17:04:29
 | SecurityIncident         | 348
 | AzureNetworkAnalytics_CL | 843
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
 
 ```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
