@@ -1,9 +1,9 @@
-# Building a SOC + Honeynet in Azure (Live Traffic)
+# Building a Security Operations Center and Honeynet Project in Azure w/ Live Traffic
 ![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
 
 ## Introduction
 
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+In this project, I built a small honeynet in Azure and ingested logs from various sources into a configured Log Analytics Worskpace. Microsoft Sentinel then used those aggregate logs to build attack maps, trigger various alerts and created incidents. I unsecured the environment for 24 hours and measured the metrics. I then applied some security controls to harden the environment and measured the metrics for another 24 hours with the results below. These are the following metrics that will be shown:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -27,9 +27,9 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Storage Account
 - Microsoft Sentinel
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+The Before metrics indicate that all resources were originally deployed and exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls open, and all other resources are deployed with public endpoints were made visible to the Internet.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+The "AFTER" metrics indicate that Network Security Groups were hardened by blocking ALL traffic with the exception of the admin workstation. All other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
@@ -72,4 +72,4 @@ Stop Time	2023-03-19 15:37
 
 In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was successfull employed to trigger alerts and create incidents from the ingested logs. Furthermore, the aforementioned metrics were measured in the insecure environment before and after securirty controls were applied. Its remarkable that the number of security related events and incidents were drasitcally reduced after subsequent application of security controls; demonstrating their effectiveness. This also goes to show that if resources were actively utilized bby regular users, there's a higher probability that more security events and alerts may have been generated with the 24-hour period after implementing secuirty controls.
