@@ -1,5 +1,6 @@
 # Building a Security Operations Center and Honeynet Project in Azure w/ Live Traffic
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+
+![Azure Project](https://github.com/letumnu/HoneyNet/assets/23455567/541459b9-17be-44b3-8d84-c3cd67f38dd7)
 
 ## Introduction
 
@@ -11,13 +12,16 @@ In this project, I built a small honeynet in Azure and ingested logs from variou
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+## Azure Architecture "PRE" Hardening Implementation/Security Controls
+![Azure Project2](https://github.com/letumnu/HoneyNet/assets/23455567/9fcb50bd-0605-49ad-9cd4-41285a63ce61)
 
-## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
 
-The architecture of the mini honeynet in Azure consists of the following components:
+
+## Azure Architecture "POST" Hardening Implementation/Security Controls
+![Azure Project3](https://github.com/letumnu/HoneyNet/assets/23455567/dbfd7e53-85f3-443b-b279-cf5763ba3574)
+
+
+The architecture of the mini honeynet in Azure consists of:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
@@ -27,9 +31,9 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Storage Account
 - Microsoft Sentinel
 
-The Before metrics indicate that all resources were originally deployed and exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls open, and all other resources are deployed with public endpoints were made visible to the Internet.
+The "PRE" metrics indicate that all resources were originally deployed and exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls open, and all other resources are deployed with public endpoints were made visible to the Internet.
 
-The "AFTER" metrics indicate that Network Security Groups were hardened by blocking ALL traffic with the exception of the admin workstation. All other resources were protected by their built-in firewalls as well as Private Endpoint
+The "POST" metrics indicate that Network Security Groups were hardened by blocking ALL traffic with the exception of the admin workstation. All other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
