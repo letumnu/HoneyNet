@@ -36,11 +36,11 @@ The "PRE" metrics indicate that all resources were originally deployed and expos
 The "POST" metrics indicate that Network Security Groups were hardened by blocking ALL traffic with the exception of the admin workstation. All other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-[NSG Allowed Inbound Malicious Flows]![NSG Flow Logs](https://github.com/letumnu/HoneyNet/assets/23455567/c9f93049-d9c1-42e1-85c6-302d98eab222)
+[Network Security Group FlowAllowed Inbound Malicious Flows]![Network Security Group Flow Logs](https://github.com/letumnu/HoneyNet/assets/23455567/c9f93049-d9c1-42e1-85c6-302d98eab222)
 <br>
-[Linux Syslog Auth Failures]![Linux Fail](https://github.com/letumnu/HoneyNet/assets/23455567/62321990-9b57-4167-aae9-320d48f1a112)
+[Linux Syslog Authentication Failures]![Linux Fail](https://github.com/letumnu/HoneyNet/assets/23455567/62321990-9b57-4167-aae9-320d48f1a112)
 <br>
-[Windows RDP/SMB Auth Failures]![Windows RDp](https://github.com/letumnu/HoneyNet/assets/23455567/a0faa21a-0bca-48a9-ac44-7a678a20df63)
+[Windows RDP/SMB Authentication Failures]![Windows RDp](https://github.com/letumnu/HoneyNet/assets/23455567/a0faa21a-0bca-48a9-ac44-7a678a20df63)
 <br>
 
 ## Metrics Before Hardening / Security Controls
@@ -51,15 +51,15 @@ Stop Time 2023-05-24 12:51:41
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 3264
+| Syslog                   | 906
+| SecurityAlert            | 3
+| SecurityIncident         | 267
+| AzureNetworkAnalytics_CL | 324
 
 ## Attack Maps After Hardening / Security Controls
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+All map queries returned no results due to the lack of malicious activity for the 24 hour period after hardening.
 
 ## Metrics After Hardening / Security Controls
 
@@ -69,11 +69,11 @@ Stop Time	2023-03-19 15:37
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
+| SecurityEvent            | 945
+| Syslog                   | 150
 | SecurityAlert            | 0
 | SecurityIncident         | 0
-| AzureNetworkAnalytics_CL | 0
+| AzureNetworkAnalytics    | 0
 
 ## Conclusion
 
